@@ -2,5 +2,5 @@
 Version=1.0
 Type=Directory
 Icon=/home/sherlock/iconos/sherlocklinux.png
-Name=02. Búsqueda de usuarios
-Comment=Herramientas OSINT para búsqueda de usuarios
+Name=02. User search
+Comment=OSINT tools for user search
