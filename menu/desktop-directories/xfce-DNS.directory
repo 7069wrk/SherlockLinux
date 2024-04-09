@@ -3,4 +3,4 @@ Version=1.0
 Type=Directory
 Icon=/home/sherlock/iconos/sherlocklinux.png
 Name=05. DNS
-Comment=Herramientas DNS para OSINT
+Comment=DNS Tools for OSINT
