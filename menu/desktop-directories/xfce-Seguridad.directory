@@ -2,5 +2,5 @@
 Version=1.0
 Type=Directory
 Icon=/home/sherlock/iconos/sherlocklinux.png
-Name=07. Seguridad
-Comment=Herramientas OSINT de seguridad
+Name=07. Security
+Comment=OSINT security tools
