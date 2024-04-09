@@ -28,22 +28,22 @@ echo -e "$AZUL2                       | |    | | '_ \| | | \ \/ /"
 echo -e "$AZUL2                       | |____| | | | | |_| |>  < "
 echo -e "$AZUL3                       |______|_|_| |_|\__,_/_/\_\  v.1"
 echo -e "$RC"
-echo -e "$AZUL Este script convertirá tu SO Debian en una distribución dedicada" 
-echo -e "$AZUL a la obtención de información en fuentes abiertas, realizará las" 
-echo -e "$AZUL siguientes acciones:"
+echo -e "$AZUL This script will turn your Debian OS into a dedicated distribution".
+echo -e "$AZUL to obtain information from open sources, will perform the". 
+echo -e "$AZUL following actions:"
 echo -e "$RC"
-echo -e "$AZUL 1. Instalará las aplicaciones más utilizadas en OSINT para la recoleción"
-echo -e "$AZUL de información en fuentes abiertas."
+echo -e "$AZUL 1. It will install the most commonly used applications in OSINT for the collection".
+echo -e "$AZUL of information from open sources."
 echo -e "$RC"
-echo -e "$AZUL 2. Personalizará el menú de escritorio para tener las aplicaciones accesibles"
-echo -e "$AZUL por categorías."
+echo -e "$AZUL 2. It will customize the desktop menu to have the applications accessible."
+echo -e "$AZUL by category."
 echo -e "$RC"
-echo -e "$AZUL 3. Configurará los navegadores Google Chrome y Mozilla Firefox con gran"
-echo -e "$AZUL cantidad de recursos para OSINT."
+echo -e "$AZUL 3. Will configure Google Chrome and Mozilla Firefox browsers with great".
+echo -e "$AZUL amount of resources for OSINT."
 echo -e "$RC"
-echo -e "$AZUL Para más información puede visitar la web $AZUL3 www.sherlock-linux.org"
+echo -e "$AZUL For more information you can visit the website $AZUL3 www.sherlock-linux.org"
 echo -e "$RC"
-echo -e "$NARANJA [Pulsa intro para comenzar] ====>>>>>>>>"
+echo -e "$NARANJA [Press enter to begin] ====>>>>>>>>"
 read -p ""
 echo -e "$RC"
 
@@ -89,7 +89,7 @@ echo -e "$RC"
 sudo apt install -y open-vm-tools
 sudo apt install -y open-vm-tools-desktop
 
-echo -e "$VERDE Requerimientos para máquinas virtuales instalados! $RC"
+echo -e "$VERDE Virtual machine requirements installed! $RC"
 echo -e "$RC"
 
 sudo mv /usr/share/images/desktop-base/desktop-grub.png /usr/share/images/desktop-base/desktop-grubBACKUP.png
@@ -115,16 +115,16 @@ default-user-image = /usr/share/images/desktop-base/sherlock.png
 
 xset b off
 
-echo -e "$VERDE Estilos aplicados! $RC"
+echo -e "$VERDE Styles applied! $RC"
 echo -e "$RC"
 
-echo -e "$AZUL3 Instalando Firefox..."
+echo -e "$AZUL3 Installing Firefox..."
 sudo apt install -y firefox-esr
 firefox-esr
 
-echo -e "$VERDE Firefox Instalado $RC"
+echo -e "$VERDE Firefox Installed $RC"
 
-echo -e "$AZUL3 Instalando Google Chome..."
+echo -e "$AZUL3 Installing Google Chome..."
 echo -e "$COLOROFF"
 lsb_release -a
 cd ~/Programs
@@ -132,12 +132,12 @@ wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.de
 sudo apt install -y ./google-chrome-stable_current_amd64.deb
 sudo apt --fix-broken install -y
 rm -R ~/Programs/google-chrome-stable_current_amd64.deb
-echo -e "$VERDE Google Chome instalado $RC"
+echo -e "$VERDE Google Chome instaled $RC"
 echo -e "$RC"
 
 
 #Its possible that the link doesnt work, in this case change the url with the correct one
-echo -e "$AZUL3 Instalando Tor..."
+echo -e "$AZUL3 Installing Tor..."
 echo -e "$COLOROFF"
 cd ~/Programs
 wget -c https://www.torproject.org/dist/torbrowser/13.0.6/tor-browser-linux-x86_64-13.0.6.tar.xz
@@ -145,14 +145,14 @@ tar -xvf tor-browser-linux-x86*.tar.xz
 rm -R ~/Programs/tor-browser-linux-x86*.tar.xz
 cd ~/Programs/tor-browser
 ./start-tor-browser.desktop --register-app
-echo -e "$VERDE Tor instalado $RC"
+echo -e "$VERDE Tor instaled $RC"
 echo -e "$RC"
 
 
-echo -e "$VERDE Navegadores instalados! $RC"
+echo -e "$VERDE Browsers Installed! $RC"
 echo -e "$RC"
 
-echo -e "$AZUL3 Configurando Mozilla Firefox... $RC"
+echo -e "$AZUL3 Configure Mozilla Firefox... $RC"
 export DISPLAY=:0
 firefox-esr &
 sleep 5
@@ -162,11 +162,11 @@ unzip $SCRIPT_DIR/firefox.zip -d ~/Programs/firefox
 \cp -R ~/Programs/firefox/* ~/.mozilla/firefox/*.default-esr
 rm -R ~/Programs/firefox
 rm -R $SCRIPT_DIR/firefox.zip
-echo -e "$VERDE Mozilla Firefox Configurado $RC"
+echo -e "$VERDE Mozilla Firefox Configured $RC"
 echo -e "$RC"
 
 
-echo -e "$AZUL3 Configurando Google Chrome... $RC"
+echo -e "$AZUL3 Configure Google Chrome... $RC"
 pkill --oldest chrome
 mkdir ~/Programs/chrome
 mkdir -p ~/.config/google-chrome
@@ -174,72 +174,72 @@ unzip $SCRIPT_DIR/chrome.zip -d ~/Programs/chrome
 cp -R ~/Programs/chrome/* ~/.config/google-chrome
 rm -R ~/Programs/chrome
 rm -R $SCRIPT_DIR/chrome.zip
-echo -e "$VERDE Google Chrome configurado $RC"
+echo -e "$VERDE Google Chrome configured $RC"
 echo -e "$RC"
 
 
-echo -e "$AZUL3 Instalando Maltego... $RC"
+echo -e "$AZUL3 Installing Maltego... $RC"
 mkdir  ~/Programs/maltego && cd  ~/Programs/maltego
 wget -c https://downloads.maltego.com/maltego-v4/linux/Maltego.v4.4.1.deb
 sudo dpkg -i Maltego.v4.4.1.deb
 sudo apt install -y maltego
 rm ~/Programs/maltego/Maltego.v4.4.1.deb
-echo -e "$VERDE Maltego instalado $RC"
+echo -e "$VERDE Maltego instaled $RC"
  
 
-echo -e "$AZUL3 Instalando Google Earth Pro... $RC"
+echo -e "$AZUL3 Installing Google Earth Pro... $RC"
 mkdir  ~/Programs/google-earth && cd  ~/Programs/google-earth
 wget https://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
 sudo apt install -y ~/Programs/google-earth/google-earth-pro-stable_current_amd64.deb
 rm ~/Programs/google-earth/google-earth-pro-stable_current_amd64.deb
-echo -e "$VERDE Google Earth Pro instalado $RC"
+echo -e "$VERDE Google Earth Pro instaled $RC"
 
 
-echo -e "$AZUL3 Visual Studio Code... $RC"
+echo -e "$AZUL3 Installing Visual Studio Code... $RC"
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt install -y apt-transport-https
 sudo apt update
 sudo apt install -y code
-echo -e "$VERDE Visual Studio Code $RC"
+echo -e "$VERDE Visual Studio Code Installed $RC"
 
 
-echo -e "$VERDE Instalando webhttrack $RC"
+echo -e "$VERDE Instaling webhttrack $RC"
 sudo apt install -y webhttrack 
-echo -e "$VERDE Webhttrack instalado $RC"
+echo -e "$VERDE Webhttrack instaled $RC"
 
 
-echo -e "$AZUL3 Instalando Yacy... $RC"
+echo -e "$AZUL3 Installing Yacy... $RC"
 mkdir ~/Programs/yacy
 cd ~/Programs/yacy
 sudo dpkg --configure -a
 wget https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz
 tar xfz yacy_v1.924_20210209_10069.tar.gz
 rm yacy_v1.924_20210209_10069.tar.gz
-echo -e "$VERDE Yacy Instalado $RC"
+echo -e "$VERDE Yacy Instaled $RC"
 echo -e "$RC"
 
 
-echo -e "$AZUL3 Instalando Phoneinfoga... $RC"
+echo -e "$AZUL3 Installing Phoneinfoga... $RC"
 mkdir ~/Programs/phoneinfoga
 cd ~/Programs/phoneinfoga
 bash <( curl -sSL https://raw.githubusercontent.com/sundowndev/phoneinfoga/master/support/scripts/install )
 sudo mv ./phoneinfoga /usr/local/bin/phoneinfoga
-echo -e "$VERDE Phoneinfoga instalado $RC"
+echo -e "$VERDE Phoneinfoga Installed $RC"
 
 
-echo -e "$AZUL3 Instalando GoBuster... $RC"
+echo -e "$AZUL3 Installing GoBuster... $RC"
 sudo apt install gobuster
-echo -e "$VERDE GoBuster instalado $RC"
+echo -e "$VERDE GoBuster instaled $RC"
 
 
-echo -e "$AZUL3 Instalando WhatWeb.. $RC"
+echo -e "$AZUL3 Installing WhatWeb.. $RC"
 sudo apt install -y whatweb
-echo -e "$VERDE WhatWeb instalado $RC"
+echo -e "$VERDE WhatWeb instaled $RC"
 
 
-echo -e "$AZUL3 Instalando XRay... $RC"
+echo -e "$AZUL3 Installing XRay... $RC"
 git clone https://github.com/evilsocket/xray.git  ~/Programs/XRay/
 cd  ~/Programs/XRay/
 wget  https://go.dev/dl/go1.20.2.linux-amd64.tar.gz
@@ -247,24 +247,24 @@ tar -C /usr/local -xzf go1.20.2.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 rm go1.20.2.linux-amd64.tar.gz
 make
-echo -e "$VERDE XRay instalado $RC"
+echo -e "$VERDE XRay instaled $RC"
 
 
-echo -e "$AZUL3 Instalando Certgraph.. $RC"
+echo -e "$AZUL3 Installing Certgraph.. $RC"
 git clone https://github.com/lanrat/certgraph.git  ~/Programs/certgraph
 cd  ~/Programs/certgraph
 make
 go build -o certgraph certgraph.go
-echo -e "$VERDE Certgraph instalado $RC"
+echo -e "$VERDE Certgraph instaled $RC"
 
 
-echo -e "$AZUL3 Instalando VLC.. $RC"
+echo -e "$AZUL3 Installing VLC.. $RC"
 sudo apt -y install vlc
-echo -e "$VERDE VLC instalado $RC"
+echo -e "$VERDE VLC Installed $RC"
 
 
 #REQUIERE CONFIGURACIÓN MANUAL
-echo -e "$AZUL3 Instalando Mr.Holmes... $RC"
+echo -e "$AZUL3 Installing Mr.Holmes... $RC"
 git clone https://github.com/Lucksi/Mr.Holmes  ~/Programs/MrHolmes/
 cd  ~/Programs/MrHolmes
 python3 -m venv ~/Programs/MrHolmes/MrHolmes-venv
@@ -273,11 +273,11 @@ sudo chmod +x install.sh
 sudo bash install.sh
 pip3 install -r requirements.txt
 deactivate
-echo -e "$VERDE Mr.Holmes instalado $RC"
+echo -e "$VERDE Mr.Holmes Installed $RC"
 echo -e "$RC"
 
 
-echo -e "$AZUL3 Instalando Spiderfoot... $RC"
+echo -e "$AZUL3 Installing Spiderfoot... $RC"
 mkdir ~/Programs/spiderfoot
 cd  ~/Programs/spiderfoot
 wget https://github.com/smicallef/spiderfoot/archive/v4.0.tar.gz
@@ -291,11 +291,11 @@ echo "Cython<3" > cython_constraint.txt
 PIP_CONSTRAINT=cython_constraint.txt pip install "ai-core-sdk[aicore-content]"
 pip3 install -r requirements.txt
 deactivate
-echo -e "$VERDE Spiderfoot instalado $RC"
+echo -e "$VERDE Spiderfoot Installed $RC"
 echo -e "$RC"
 
 
-echo -e "$AZUL3 Instalando Bbot... $RC"
+echo -e "$AZUL3 Installing Bbot... $RC"
 mkdir -p  ~/Programs/bbot/
 cd ~/Programs/bbot/
 python3 -m venv ~/Programs/bbot/bbot-venv
@@ -303,100 +303,100 @@ source bbot-venv/bin/activate
 pip3 install bbot
 bbot --install-all-deps
 deactivate
-echo -e "$VERDE Bbot instalado $RC"
+echo -e "$VERDE Bbot Installed $RC"
  
 
-echo -e "$AZUL3 Instalando Pagodo... $RC"
+echo -e "$AZUL3 Installing Pagodo... $RC"
 git clone https://github.com/opsdisk/pagodo.git  ~/Programs/pagodo/
 cd  ~/Programs/pagodo/
 python3 -m venv pagodo-venv
 source pagodo-venv/bin/activate
 pip3 install -r requirements.txt
 deactivate
-echo -e "$VERDE Pagodo instalado $RC"
+echo -e "$VERDE Pagodo Installed $RC"
  
 
-echo -e "$AZUL3 Instalando Scanless... $RC"
+echo -e "$AZUL3 Installing Scanless... $RC"
 git clone https://github.com/vesche/scanless  ~/Programs/scanless/
 cd  ~/Programs/scanless/
 python3 -m venv scanless-venv
 source scanless-venv/bin/activate
 pip install scanless
 deactivate
-echo -e "$VERDE Scanless instalado $RC"
+echo -e "$VERDE Scanless Installed $RC"
 
 
-echo -e "$AZUL3 Instalando theHarvester... $RC"
+echo -e "$AZUL3 Installing theHarvester... $RC"
 git clone https://github.com/laramies/theHarvester.git  ~/Programs/theHarvester/
 cd  ~/Programs/theHarvester
 python3 -m venv ~/Programs/theHarvester/theHarvester-venv
 source theHarvester-venv/bin/activate
 pip3 install -r requirements.txt
 deactivate
-echo -e "$VERDE theHarvester instalado $RC"
+echo -e "$VERDE theHarvester Installed $RC"
  
 
-echo -e "$AZUL3 Instalando Sherlock... $RC"
+echo -e "$AZUL3 Installing Sherlock... $RC"
 git clone https://github.com/sherlock-project/sherlock.git  ~/Programs/Sherlock
 cd  ~/Programs/Sherlock
 python3 -m venv ~/Programs/Sherlock/Sherlock-venv
 source Sherlock-venv/bin/activate
 pip3 install -r requirements.txt
 deactivate
-echo -e "$VERDE Sherlock instalado $RC"
+echo -e "$VERDE Sherlock Installed $RC"
 
 
-echo -e "$AZUL3 Instalando Photon... $RC"
+echo -e "$AZUL3 Installing Photon... $RC"
 git clone https://github.com/s0md3v/Photon.git  ~/Programs/Photon/
 cd  ~/Programs/Photon/
 python3 -m venv Photon-venv
 source Photon-venv/bin/activate
 pip3 install -r requirements.txt
 deactivate
-echo -e "$VERDE Photon instalado $RC"
+echo -e "$VERDE Photon Installed $RC"
  
 
-echo -e "$AZUL3 Instalando CloudFail... $RC"
+echo -e "$AZUL3 Installing CloudFail... $RC"
 git clone https://github.com/m0rtem/CloudFail.git  ~/Programs/CloudFail/
 cd  ~/Programs/CloudFail/
 python3 -m venv CloudFail-venv
 source CloudFail-venv/bin/activate
 pip3 install -r requirements.txt
 deactivate
-echo -e "$VERDE CloudFail instalado $RC"
+echo -e "$VERDE CloudFail Installed $RC"
  
 
-echo -e "$AZUL3 Instalando CloudScraper... $RC"
+echo -e "$AZUL3 Installing CloudScraper... $RC"
 git clone https://github.com/jordanpotti/CloudScraper.git  ~/Programs/CloudScraper/
 cd  ~/Programs/CloudScraper/
 python3 -m venv CloudScraper-venv
 source CloudScraper-venv/bin/activate
 pip3 install -r requirements.txt
 deactivate
-echo -e "$VERDE CloudScraper instalado $RC"
+echo -e "$VERDE CloudScraper Installed $RC"
 
 
-echo -e "$AZUL3 Instalando DNSRecon... $RC"
+echo -e "$AZUL3 Installing DNSRecon... $RC"
 git clone https://github.com/darkoperator/dnsrecon.git  ~/Programs/DNSRecon/
 cd  ~/Programs/DNSRecon/
 python3 -m venv DNSRecon-venv
 source DNSRecon-venv/bin/activate
 pip3 install -r requirements.txt
 deactivate
-echo -e "$VERDE DNSRecon instalado $RC"
+echo -e "$VERDE DNSRecon Installed $RC"
  
 
-echo -e "$AZUL3 Instalando Hostintel... $RC"
+echo -e "$AZUL3 Installing Hostintel... $RC"
 git clone https://github.com/keithjjones/hostintel.git  ~/Programs/Hostintel/
 cd  ~/Programs/Hostintel/
 python3 -m venv Hostintel-venv
 source Hostintel-venv/bin/activate
 pip3 install -r requirements.txt
 deactivate
-echo -e "$VERDE Hostintel instalado $RC"
+echo -e "$VERDE Hostintel Installed $RC"
 
 
-echo -e "$AZUL3 Instalando Infoga... $RC"
+echo -e "$AZUL3 Installing Infoga... $RC"
 git clone https://github.com/The404Hacking/Infoga.git  ~/Programs/infoga/
 cd  ~/Programs/infoga/
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev
@@ -415,29 +415,29 @@ python2 -m virtualenv infoga-venv
 source infoga-venv/bin/activate
 pip2 install requests
 deactivate
-echo -e "$VERDE Infoga instalado $RC"
+echo -e "$VERDE Infoga Installed $RC"
  
 
-echo -e "$AZUL3 Instalando GitRecon... $RC"
+echo -e "$AZUL3 Installing GitRecon... $RC"
 git clone https://github.com/GONZOsint/gitrecon.git  ~/Programs/gitrecon/
 cd  ~/Programs/gitrecon/
 python3 -m venv gitrecon-venv
 source gitrecon-venv/bin/activate
 python3 -m pip install -r requirements.txt
 deactivate
-echo -e "$VERDE GitRecon instalado $RC"
+echo -e "$VERDE GitRecon Installed $RC"
 
 
-echo -e "$AZUL3 Instalando ExifTool.. $RC"
+echo -e "$AZUL3 Installing ExifTool.. $RC"
 mkdir -p  ~/Programs/ExifTool/
 cd  ~/Programs/ExifTool/
 wget  https://exiftool.org/Image-ExifTool-12.63.tar.gz
 tar xfz Image-ExifTool-12.63.tar.gz
 rm Image-ExifTool-12.63.tar.gz
-echo -e "$VERDE Exiftool instalado $RC"
+echo -e "$VERDE Exiftool Installed $RC"
 
 
-echo -e "$AZUL3 Instalando EyeWitness... $RC"
+echo -e "$AZUL3 Installing EyeWitness... $RC"
 git clone https://github.com/RedSiege/EyeWitness.git  ~/Programs/eyewitness/
 cd ~/Programs/eyewitness
 python3 -m venv ~/Programs/eyewitness/eyewitness-venv
@@ -449,20 +449,20 @@ pip3 install selenium
 pip3 install fuzzywuzzy
 pip3 install pyvirtualdisplay
 deactivate
-echo -e "$VERDE EyeWitness instalado $RC"
+echo -e "$VERDE EyeWitness Installed $RC"
 echo -e "$RC"
 
 
-echo -e "$AZUL3 Instalando Metagoofil... $RC"
+echo -e "$AZUL3 Installing Metagoofil... $RC"
 git clone https://github.com/opsdisk/metagoofil  ~/Programs/metagoofil/
 cd ~/Programs/metagoofil/
 python3 -m venv ~/Programs/metagoofil/metagoofil-venv
 source metagoofil-venv/bin/activate
 pip3 install -r requirements.txt
-echo -e "$VERDE Metagoofil instalado $RC"
+echo -e "$VERDE Metagoofil Installed $RC"
 
 
-echo -e "$AZUL3 Instalando OSFramework... $RC"
+echo -e "$AZUL3 Installing OSFramework... $RC"
 mkdir -p ~/Programs/osrframework/
 cd ~/Programs/osrframework/
 python3 -m venv ~/Programs/osrframework/osrframework-venv
@@ -471,10 +471,10 @@ pip3 install pip==21.2
 pip3 install osrframework
 pip3 install 'urllib3<2'
 deactivate
-echo -e "$VERDE OSRFramework instalado $RC"
+echo -e "$VERDE OSRFramework Installed $RC"
 
 
-echo -e "$AZUL3 Instalando eo-ripper... $RC"
+echo -e "$AZUL3 Installing eo-ripper... $RC"
 git clone https://github.com/Quantika14/email-osint-ripper.git ~/Programs/eo-ripper/
 cd ~/Programs/eo-ripper/
 python3 -m venv ~/Programs/eo-ripper/eo-ripper-venv
@@ -482,20 +482,20 @@ source eo-ripper-venv/bin/activate
 pip3 install -r requeriments.txt
 pip3 install requests
 deactivate
-echo -e "$VERDE eo-ripper instalado $RC"
+echo -e "$VERDE eo-ripper Installed $RC"
 
 
-echo -e "$AZUL3 Instalando Instaloader... $RC"
+echo -e "$AZUL3 Installing Instaloader... $RC"
 mkdir -p ~/Programs/instaloader/
 cd ~/Programs/instaloader/
 python3 -m venv ~/Programs/instaloader/instaloader-venv
 source instaloader-venv/bin/activate
 pip3 install instaloader
 deactivate
-echo -e "$VERDE Instaloader instalado $RC"
+echo -e "$VERDE Instaloader Installed $RC"
 
 
-echo -e "$AZUL3 Instalando GHunt... $RC"
+echo -e "$AZUL3 Installing GHunt... $RC"
 git clone https://github.com/mxrch/ghunt ~/Programs/GHunt
 cd  ~/Programs/GHunt
 python3 -m venv ~/Programs/GHunt/GHunt-venv
@@ -504,22 +504,22 @@ pip3 install pipx
 pipx ensurepath
 pipx install ghunt
 deactivate
-echo -e "$VERDE GHunt instalado $RC"
+echo -e "$VERDE GHunt Installed $RC"
 echo -e "$RC" 
 
 
-echo -e "$AZUL3 Instalando Ivre... $RC"
+echo -e "$AZUL3 Installing Ivre... $RC"
 mkdir  ~/Programs/Ivre/
 cd ~/Programs/Ivre/
 python3 -m venv ~/Programs/Ivre/Ivre-venv
 source Ivre-venv/bin/activate
 pip install ivre
 deactivate
-echo -e "$VERDE Ivre instalado $RC"
+echo -e "$VERDE Ivre Installed $RC"
 echo -e "$RC"
 
 
-echo -e "$AZUL3 Instalando TorBot... $RC"
+echo -e "$AZUL3 Installing TorBot... $RC"
 git clone https://github.com/DedSecInside/TorBot.git  ~/Programs/torbot/
 cd  ~/Programs/torbot
 python3 -m venv ~/Programs/torbot/torbot-venv
@@ -527,11 +527,11 @@ source torbot-venv/bin/activate
 pip3 install -r requirements.txt
 python3 torbot -u https://www.example.com
 deactivate
-echo -e "$VERDE TorBot instalado $RC"
+echo -e "$VERDE TorBot Installed $RC"
 echo -e "$RC"
 
 
-echo -e "$AZUL3 Instalando ProtOSINT... $RC"
+echo -e "$AZUL3 Installing ProtOSINT... $RC"
 git clone https://github.com/pixelbubble/ProtOSINT.git ~/Programs/protosint/
 cd  ~/Programs/protosint/
 python3 -m venv ~/Programs/protosint/protosint-venv
@@ -539,7 +539,7 @@ source protosint-venv/bin/activate
 pip3 install -r requirements.txt
 pip3 install requests
 deactivate
-echo -e "$VERDE Instaloader instalado $RC"
+echo -e "$VERDE Instaloader Installed $RC"
 
 
 sudo mkdir -p /usr/share/sherlock-menu/
@@ -593,7 +593,7 @@ sudo chmod +x /usr/bin/instaloader
 sudo chmod +x /usr/bin/protosint
 
 
-echo -e "$VERDE Menús y accesos directos creados $RC"
+echo -e "$VERDE Menus and shortcuts created $RC"
 echo -e "$RC"
 
 
@@ -607,7 +607,7 @@ rm -rf ~/.cache/*
 cat /dev/null > ~/.bash_history
 
 
-echo -e "$AZUL3 A continuación se reiniciará el sistema para aplicar los últimos cambios"
-echo -e "$NARANJA Pulsa intro para continuar"
+echo -e "$AZUL3 The system will then restart to apply the latest changes."
+echo -e "$NARANJA Press enter to continue"
 read -p ""
 systemctl reboot
