@@ -18,7 +18,7 @@
     </Layout>
 
     <Menu>
-        <Name>01. Navegadores</Name>
+        <Name>01. Browsers</Name>
         <Directory>xfce-Browsers.directory</Directory>
         <Include>
             <And>
@@ -29,7 +29,7 @@
     <!-- End Browsers -->
 
     <Menu>
-        <Name>02. Búsqueda de usuarios</Name>
+        <Name>02. User search</Name>
         <Directory>xfce-BUsuarios.directory</Directory>
         <Include>
             <And>
@@ -40,14 +40,14 @@
     <!-- End Browsers -->
 
     <Menu>
-      <Name>03. Búsqueda de emails, dorks, ...</Name>
+      <Name>03. Search for emails, dorks, ...</Name>
       <Directory>xfce-BOtros.directory</Directory>
       <Include>
         <And>
           <Category>X-BOtros</Category>
         </And>
       </Include>
-    </Menu> <!-- End Búsqueda Otros -->
+    </Menu> <!-- End Search, Others -->
 
     <Menu>
       <Name>04. Frameworks OSINT</Name>
@@ -80,24 +80,24 @@
     </Menu> <!-- End Network Mapper -->
 
     <Menu>
-      <Name>07. Seguridad</Name>
+      <Name>07. Security</Name>
       <Directory>xfce-Seguridad.directory</Directory>
       <Include> 
         <And>
           <Category>X-Seguridad</Category>
         </And>
       </Include>
-    </Menu> <!-- End Seguridad -->
+    </Menu> <!-- End Security -->
 
      <Menu>
-      <Name>08. Varios</Name>
+      <Name>08. Various</Name>
       <Directory>xfce-Varios.directory</Directory>
       <Include>
         <And>
           <Category>X-Varios</Category>
         </And>
       </Include>
-    </Menu> <!-- End Varios -->
+    </Menu> <!-- End Various -->
 
     <Menu>
         <Name>Settings</Name>
