@@ -79,7 +79,7 @@ sudo tar -C /usr/local -xzf go1.20.4.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 rm go1.20.4.linux-amd64.tar.gz
 
-echo -e "$VERDE Dependencias instaladas! $RC"
+echo -e "$VERDE Install Dependencies $RC"
 echo -e "$RC"
  
 #sudo add-apt-repository multiverse
@@ -132,7 +132,7 @@ wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.de
 sudo apt install -y ./google-chrome-stable_current_amd64.deb
 sudo apt --fix-broken install -y
 rm -R ~/Programs/google-chrome-stable_current_amd64.deb
-echo -e "$VERDE Google Chome instaled $RC"
+echo -e "$VERDE Google Chome Installed $RC"
 echo -e "$RC"
 
 
@@ -145,7 +145,7 @@ tar -xvf tor-browser-linux-x86*.tar.xz
 rm -R ~/Programs/tor-browser-linux-x86*.tar.xz
 cd ~/Programs/tor-browser
 ./start-tor-browser.desktop --register-app
-echo -e "$VERDE Tor instaled $RC"
+echo -e "$VERDE Tor Installed $RC"
 echo -e "$RC"
 
 
@@ -184,7 +184,7 @@ wget -c https://downloads.maltego.com/maltego-v4/linux/Maltego.v4.4.1.deb
 sudo dpkg -i Maltego.v4.4.1.deb
 sudo apt install -y maltego
 rm ~/Programs/maltego/Maltego.v4.4.1.deb
-echo -e "$VERDE Maltego instaled $RC"
+echo -e "$VERDE Maltego Installed $RC"
  
 
 echo -e "$AZUL3 Installing Google Earth Pro... $RC"
@@ -192,7 +192,7 @@ mkdir  ~/Programs/google-earth && cd  ~/Programs/google-earth
 wget https://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
 sudo apt install -y ~/Programs/google-earth/google-earth-pro-stable_current_amd64.deb
 rm ~/Programs/google-earth/google-earth-pro-stable_current_amd64.deb
-echo -e "$VERDE Google Earth Pro instaled $RC"
+echo -e "$VERDE Google Earth Pro Installed $RC"
 
 
 echo -e "$AZUL3 Installing Visual Studio Code... $RC"
@@ -207,7 +207,7 @@ echo -e "$VERDE Visual Studio Code Installed $RC"
 
 echo -e "$VERDE Instaling webhttrack $RC"
 sudo apt install -y webhttrack 
-echo -e "$VERDE Webhttrack instaled $RC"
+echo -e "$VERDE Webhttrack Installed $RC"
 
 
 echo -e "$AZUL3 Installing Yacy... $RC"
@@ -217,7 +217,7 @@ sudo dpkg --configure -a
 wget https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz
 tar xfz yacy_v1.924_20210209_10069.tar.gz
 rm yacy_v1.924_20210209_10069.tar.gz
-echo -e "$VERDE Yacy Instaled $RC"
+echo -e "$VERDE Yacy Installed $RC"
 echo -e "$RC"
 
 
@@ -231,12 +231,12 @@ echo -e "$VERDE Phoneinfoga Installed $RC"
 
 echo -e "$AZUL3 Installing GoBuster... $RC"
 sudo apt install gobuster
-echo -e "$VERDE GoBuster instaled $RC"
+echo -e "$VERDE GoBuster installed $RC"
 
 
 echo -e "$AZUL3 Installing WhatWeb.. $RC"
 sudo apt install -y whatweb
-echo -e "$VERDE WhatWeb instaled $RC"
+echo -e "$VERDE WhatWeb installed $RC"
 
 
 echo -e "$AZUL3 Installing XRay... $RC"
@@ -247,7 +247,7 @@ tar -C /usr/local -xzf go1.20.2.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 rm go1.20.2.linux-amd64.tar.gz
 make
-echo -e "$VERDE XRay instaled $RC"
+echo -e "$VERDE XRay Installed $RC"
 
 
 echo -e "$AZUL3 Installing Certgraph.. $RC"
@@ -255,7 +255,7 @@ git clone https://github.com/lanrat/certgraph.git  ~/Programs/certgraph
 cd  ~/Programs/certgraph
 make
 go build -o certgraph certgraph.go
-echo -e "$VERDE Certgraph instaled $RC"
+echo -e "$VERDE Certgraph Installed $RC"
 
 
 echo -e "$AZUL3 Installing VLC.. $RC"
