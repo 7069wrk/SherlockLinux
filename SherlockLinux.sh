@@ -47,9 +47,10 @@ echo -e "$NARANJA [Press enter to begin] ====>>>>>>>>"
 read -p ""
 echo -e "$RC"
 
-
+### Update cache and apps
 sudo apt -y update && sudo apt -y upgrade
 
+### Install deployment dependencies
 sudo apt install -y git
 sudo apt install -y curl
 sudo apt install -y default-jre
@@ -60,26 +61,34 @@ sudo apt install -y zip
 sudo apt install -y libglib2.0-dev
 sudo apt install -y wget
 
+### Remove unnecessary installations
 sudo apt remove -y xterm
 sudo apt purge -y xterm
+
+### Install GNOME tools
 sudo apt install -y gnome-terminal
 sudo apt install -y dbus-x11
 xfconf-query -c xsettings -p /Net/ThemeName -s "Adwaita-dark"
 gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
 gsettings set org.gnome.desktop.sound event-sounds false
 
+### Install network dependencies and enable
 sudo apt install -y network-manager
 sudo apt install -y network-manager-gnome
 sudo systemctl enable NetworkManager.service
 
+### create installation path for applications
 mkdir  ~/Programs
+
+### install GO
 cd ~/Programs
 wget -c https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.20.4.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 rm go1.20.4.linux-amd64.tar.gz
 
-echo -e "$VERDE Install Dependencies $RC"
+
+echo -e "$VERDE Install Virtual Environment Dependencies $RC"
 echo -e "$RC"
  
 #sudo add-apt-repository multiverse
@@ -90,6 +99,10 @@ sudo apt install -y open-vm-tools
 sudo apt install -y open-vm-tools-desktop
 
 echo -e "$VERDE Virtual machine requirements installed! $RC"
+echo -e "$RC"
+
+
+echo -e "$VERDE Configure Styles $RC"
 echo -e "$RC"
 
 sudo mv /usr/share/images/desktop-base/desktop-grub.png /usr/share/images/desktop-base/desktop-grubBACKUP.png
@@ -118,11 +131,16 @@ xset b off
 echo -e "$VERDE Styles applied! $RC"
 echo -e "$RC"
 
+
+###
+### Install tools identified as the Sherlock collection 
+###
+
 echo -e "$AZUL3 Installing Firefox..."
 sudo apt install -y firefox-esr
 firefox-esr
-
 echo -e "$VERDE Firefox Installed $RC"
+
 
 echo -e "$AZUL3 Installing Google Chome..."
 echo -e "$COLOROFF"
