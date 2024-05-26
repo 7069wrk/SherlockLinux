@@ -1,13 +1,13 @@
 #!/bin/bash
 
-AZUL1='\033[94m'
-AZUL2='\033[95m'
-AZUL3='\033[96m'
-ROJO='\033[91m'
-VERDE='\033[92m'
-NARANJA='\033[93m'
-RC='\e[0m'
-COLOROFF='\033[0m' 
+AZUL1='\033[94m' ### BLUE
+AZUL2='\033[95m' ### PURPLE
+AZUL3='\033[96m' ### CYAN
+ROJO='\033[91m' ### RED
+VERDE='\033[92m' ### GREEN
+NARANJA='\033[93m' ### YELLOW
+RC='\e[0m' ### RESET COLOR TO DEFAULT
+COLOROFF='\033[0m' ### NO COLOR
 
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
