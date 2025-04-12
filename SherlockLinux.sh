@@ -66,11 +66,11 @@ sudo apt remove -y xterm
 sudo apt purge -y xterm
 
 ### Install GNOME tools
-sudo apt install -y gnome-terminal
-sudo apt install -y dbus-x11
-xfconf-query -c xsettings -p /Net/ThemeName -s "Adwaita-dark"
-gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
-gsettings set org.gnome.desktop.sound event-sounds false
+### sudo apt install -y gnome-terminal
+### sudo apt install -y dbus-x11
+### xfconf-query -c xsettings -p /Net/ThemeName -s "Adwaita-dark"
+### gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
+### gsettings set org.gnome.desktop.sound event-sounds false
 
 ### Install network dependencies and enable
 sudo apt install -y network-manager
