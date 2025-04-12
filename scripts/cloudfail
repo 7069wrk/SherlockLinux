@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd /home/sherlock/Programs/CloudFail
-source /home/sherlock/Programs/CloudFail/CloudFail-venv/bin/activate
-/home/sherlock/Programs/CloudFail/CloudFail-venv/bin/python3 /home/sherlock/Programs/CloudFail/cloudfail.py "$@"
+cd ~/_installed/CloudFail
+source ~/_installed/CloudFail/CloudFail-venv/bin/activate
+~/_installed/CloudFail/CloudFail-venv/bin/python3 /home/sherlock/Programs/CloudFail/cloudfail.py "$@"
