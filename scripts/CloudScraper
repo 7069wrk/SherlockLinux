@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd ~/_installed/CloudScraper
-source ~/_installed/CloudScraper/CloudScraper-venv/bin/activate
-~/_installed/CloudScraper/CloudScraper-venv/bin/python3 /home/sherlock/Programs/CloudScraper/CloudScraper.py "$@"
+cd /opt/sherlock/CloudScraper
+source /opt/sherlock/CloudScraper/CloudScraper-venv/bin/activate
+/opt/sherlock/CloudScraper/CloudScraper-venv/bin/python3 /opt/sherlock/CloudScraper/CloudScraper.py "$@"
