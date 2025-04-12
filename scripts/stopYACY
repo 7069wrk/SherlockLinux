@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-/home/sherlock/Programs/yacy/yacy/stopYACY.sh
+~/_installed/yacy/yacy/stopYACY.sh
