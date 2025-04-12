@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-/home/sherlock/Programs/XRay/build/xray "$@"
+~/_installed/XRay/build/xray "$@"
