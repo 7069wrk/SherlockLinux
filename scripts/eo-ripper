@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 cd ~/_installed/eo-ripper
 source ~/_installed/eo-ripper/eo-ripper-venv/bin/activate
-sudo ~/_installed/eo-ripper/eo-ripper-venv/bin/python3 /home/sherlock/Programs/eo-ripper/eo-ripper.py
+sudo ~/_installed/eo-ripper/eo-ripper-venv/bin/python3 ~/_installed/eo-ripper/eo-ripper.py
