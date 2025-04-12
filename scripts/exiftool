@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-/home/sherlock/Programs/ExifTool/Image-ExifTool-12.63/exiftool "$@"
+~/_installed/ExifTool/Image-ExifTool-12.63/exiftool "$@"
