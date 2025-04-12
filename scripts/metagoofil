@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd /home/sherlock/Programs/metagoofil
-source /home/sherlock/Programs/metagoofil/metagoofil-venv/bin/activate
-/home/sherlock/Programs/metagoofil/metagoofil-venv/bin/python3 /home/sherlock/Programs/metagoofil/metagoofil.py "$@"
+cd ~/_installed/metagoofil
+source ~/_installed/metagoofil/metagoofil-venv/bin/activate
+~/_installed/metagoofil/metagoofil-venv/bin/python3 /home/sherlock/Programs/metagoofil/metagoofil.py "$@"
