@@ -78,10 +78,10 @@ sudo apt install -y network-manager-gnome
 sudo systemctl enable NetworkManager.service
 
 ### create installation path for applications
-mkdir  /opt/sherlock
+mkdir  ~/_installed
 
 ### install GO
-cd /opt/sherlock
+cd ~/_intalled
 wget -c https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.20.4.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
@@ -145,11 +145,11 @@ echo -e "$VERDE Firefox Installed $RC"
 echo -e "$AZUL3 Installing Google Chome..."
 echo -e "$COLOROFF"
 lsb_release -a
-cd /opt/sherlock
+cd ~/_installed
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install -y ./google-chrome-stable_current_amd64.deb
 sudo apt --fix-broken install -y
-rm -R /opt/sherlock/google-chrome-stable_current_amd64.deb
+rm -R ~/_installed/google-chrome-stable_current_amd64.deb
 echo -e "$VERDE Google Chome Installed $RC"
 echo -e "$RC"
 
@@ -157,11 +157,11 @@ echo -e "$RC"
 #Its possible that the link doesnt work, in this case change the url with the correct one
 echo -e "$AZUL3 Installing Tor..."
 echo -e "$COLOROFF"
-cd /opt/sherlock
+cd ~/_installed
 wget -c https://www.torproject.org/dist/torbrowser/13.0.6/tor-browser-linux-x86_64-13.0.6.tar.xz
 tar -xvf tor-browser-linux-x86*.tar.xz
-rm -R /opt/sherlock/tor-browser-linux-x86*.tar.xz
-cd /opt/sherlock/tor-browser
+rm -R ~/_installed/tor-browser-linux-x86*.tar.xz
+cd ~/_installed/tor-browser
 ./start-tor-browser.desktop --register-app
 echo -e "$VERDE Tor Installed $RC"
 echo -e "$RC"
@@ -175,10 +175,10 @@ export DISPLAY=:0
 firefox-esr &
 sleep 5
 pkill -f firefox
-mkdir /opt/sherlock/firefox
-unzip $SCRIPT_DIR/firefox.zip -d /opt/sherlock/firefox
-\cp -R /opt/sherlock/firefox/* ~/.mozilla/firefox/*.default-esr
-rm -R /opt/sherlock/firefox
+mkdir ~/_installed/firefox
+unzip $SCRIPT_DIR/firefox.zip -d ~/_installed/firefox
+\cp -R ~/_installed/firefox/* ~/.mozilla/firefox/*.default-esr
+rm -R ~/_installed/firefox
 rm -R $SCRIPT_DIR/firefox.zip
 echo -e "$VERDE Mozilla Firefox Configured $RC"
 echo -e "$RC"
@@ -186,30 +186,30 @@ echo -e "$RC"
 
 echo -e "$AZUL3 Configure Google Chrome... $RC"
 pkill --oldest chrome
-mkdir /opt/sherlock/chrome
+mkdir ~/_installed/chrome
 mkdir -p ~/.config/google-chrome
-unzip $SCRIPT_DIR/chrome.zip -d /opt/sherlock/chrome
-cp -R /opt/sherlock/chrome/* ~/.config/google-chrome
-rm -R /opt/sherlock/chrome
+unzip $SCRIPT_DIR/chrome.zip -d ~/_installed/chrome
+cp -R ~/_installed/chrome/* ~/.config/google-chrome
+rm -R ~/_installed/chrome
 rm -R $SCRIPT_DIR/chrome.zip
 echo -e "$VERDE Google Chrome configured $RC"
 echo -e "$RC"
 
 
 echo -e "$AZUL3 Installing Maltego... $RC"
-mkdir  /opt/sherlock/maltego && cd  /opt/sherlock/maltego
+mkdir  ~/_installed/maltego && cd  ~/_installed/maltego
 wget -c https://downloads.maltego.com/maltego-v4/linux/Maltego.v4.4.1.deb
 sudo dpkg -i Maltego.v4.4.1.deb
 sudo apt install -y maltego
-rm /opt/sherlock/maltego/Maltego.v4.4.1.deb
+rm ~/_installed/maltego/Maltego.v4.4.1.deb
 echo -e "$VERDE Maltego Installed $RC"
  
 
 echo -e "$AZUL3 Installing Google Earth Pro... $RC"
-mkdir  /opt/sherlock/google-earth && cd  /opt/sherlock/google-earth
+mkdir  ~/_installed/google-earth && cd  ~/_installed/google-earth
 wget https://dl.google.com/dl/earth/client/current/google-earth-pro-stable_current_amd64.deb
-sudo apt install -y /opt/sherlock/google-earth/google-earth-pro-stable_current_amd64.deb
-rm /opt/sherlock/google-earth/google-earth-pro-stable_current_amd64.deb
+sudo apt install -y ~/_installed/google-earth/google-earth-pro-stable_current_amd64.deb
+rm ~/_installed/google-earth/google-earth-pro-stable_current_amd64.deb
 echo -e "$VERDE Google Earth Pro Installed $RC"
 
 
@@ -229,8 +229,8 @@ echo -e "$VERDE Webhttrack Installed $RC"
 
 
 echo -e "$AZUL3 Installing Yacy... $RC"
-mkdir /opt/sherlock/yacy
-cd /opt/sherlock/yacy
+mkdir ~/_installed/yacy
+cd ~/_installed/yacy
 sudo dpkg --configure -a
 wget https://download.yacy.net/yacy_v1.924_20210209_10069.tar.gz
 tar xfz yacy_v1.924_20210209_10069.tar.gz
@@ -240,8 +240,8 @@ echo -e "$RC"
 
 
 echo -e "$AZUL3 Installing Phoneinfoga... $RC"
-mkdir /opt/sherlock/phoneinfoga
-cd /opt/sherlock/phoneinfoga
+mkdir ~/_installed/phoneinfoga
+cd ~/_installed/phoneinfoga
 bash <( curl -sSL https://raw.githubusercontent.com/sundowndev/phoneinfoga/master/support/scripts/install )
 sudo mv ./phoneinfoga /usr/local/bin/phoneinfoga
 echo -e "$VERDE Phoneinfoga Installed $RC"
@@ -258,8 +258,8 @@ echo -e "$VERDE WhatWeb installed $RC"
 
 
 echo -e "$AZUL3 Installing XRay... $RC"
-git clone https://github.com/evilsocket/xray.git  /opt/sherlock/XRay/
-cd  /opt/sherlock/XRay/
+git clone https://github.com/evilsocket/xray.git  ~/_installed/XRay/
+cd  ~/_installed/XRay/
 wget  https://go.dev/dl/go1.20.2.linux-amd64.tar.gz
 tar -C /usr/local -xzf go1.20.2.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
@@ -269,8 +269,8 @@ echo -e "$VERDE XRay Installed $RC"
 
 
 echo -e "$AZUL3 Installing Certgraph.. $RC"
-git clone https://github.com/lanrat/certgraph.git  /opt/sherlock/certgraph
-cd  /opt/sherlock/certgraph
+git clone https://github.com/lanrat/certgraph.git  ~/_installed/certgraph
+cd  ~/_installed/certgraph
 make
 go build -o certgraph certgraph.go
 echo -e "$VERDE Certgraph Installed $RC"
@@ -283,9 +283,9 @@ echo -e "$VERDE VLC Installed $RC"
 
 #REQUIERE CONFIGURACIÓN MANUAL
 echo -e "$AZUL3 Installing Mr.Holmes... $RC"
-git clone https://github.com/Lucksi/Mr.Holmes  /opt/sherlock/MrHolmes/
-cd  /opt/sherlock/MrHolmes
-python3 -m venv /opt/sherlock/MrHolmes/MrHolmes-venv
+git clone https://github.com/Lucksi/Mr.Holmes  ~/_installed/MrHolmes/
+cd  ~/_installed/MrHolmes
+python3 -m venv ~/_installed/MrHolmes/MrHolmes-venv
 source MrHolmes-venv/bin/activate
 sudo chmod +x install.sh
 sudo bash install.sh
@@ -296,12 +296,12 @@ echo -e "$RC"
 
 
 echo -e "$AZUL3 Installing Spiderfoot... $RC"
-mkdir /opt/sherlock/spiderfoot
-cd  /opt/sherlock/spiderfoot
+mkdir ~/_installed/spiderfoot
+cd  ~/_installed/spiderfoot
 wget https://github.com/smicallef/spiderfoot/archive/v4.0.tar.gz
 tar zxvf v4.0.tar.gz
 rm v4.0.tar.gz
-python3 -m venv /opt/sherlock/spiderfoot/spiderfoot-venv
+python3 -m venv ~/_installed/spiderfoot/spiderfoot-venv
 source spiderfoot-venv/bin/activate
 cd spiderfoot-4.0
 #Solve problem with Cython 3.0.0
@@ -314,9 +314,9 @@ echo -e "$RC"
 
 
 echo -e "$AZUL3 Installing Bbot... $RC"
-mkdir -p  /opt/sherlock/bbot/
-cd /opt/sherlock/bbot/
-python3 -m venv /opt/sherlock/bbot/bbot-venv
+mkdir -p  ~/_installed/bbot/
+cd ~/_installed/bbot/
+python3 -m venv ~/_installed/bbot/bbot-venv
 source bbot-venv/bin/activate
 pip3 install bbot
 bbot --install-all-deps
@@ -325,8 +325,8 @@ echo -e "$VERDE Bbot Installed $RC"
  
 
 echo -e "$AZUL3 Installing Pagodo... $RC"
-git clone https://github.com/opsdisk/pagodo.git  /opt/sherlock/pagodo/
-cd  /opt/sherlock/pagodo/
+git clone https://github.com/opsdisk/pagodo.git  ~/_installed/pagodo/
+cd  ~/_installed/pagodo/
 python3 -m venv pagodo-venv
 source pagodo-venv/bin/activate
 pip3 install -r requirements.txt
@@ -335,8 +335,8 @@ echo -e "$VERDE Pagodo Installed $RC"
  
 
 echo -e "$AZUL3 Installing Scanless... $RC"
-git clone https://github.com/vesche/scanless  /opt/sherlock/scanless/
-cd  /opt/sherlock/scanless/
+git clone https://github.com/vesche/scanless  ~/_installed/scanless/
+cd  ~/_installed/scanless/
 python3 -m venv scanless-venv
 source scanless-venv/bin/activate
 pip install scanless
@@ -345,9 +345,9 @@ echo -e "$VERDE Scanless Installed $RC"
 
 
 echo -e "$AZUL3 Installing theHarvester... $RC"
-git clone https://github.com/laramies/theHarvester.git  /opt/sherlock/theHarvester/
-cd  /opt/sherlock/theHarvester
-python3 -m venv /opt/sherlock/theHarvester/theHarvester-venv
+git clone https://github.com/laramies/theHarvester.git  ~/_installed/theHarvester/
+cd  ~/_installed/theHarvester
+python3 -m venv ~/_installed/theHarvester/theHarvester-venv
 source theHarvester-venv/bin/activate
 pip3 install -r requirements.txt
 deactivate
@@ -355,9 +355,9 @@ echo -e "$VERDE theHarvester Installed $RC"
  
 
 echo -e "$AZUL3 Installing Sherlock... $RC"
-git clone https://github.com/sherlock-project/sherlock.git  /opt/sherlock/Sherlock
-cd  /opt/sherlock/Sherlock
-python3 -m venv /opt/sherlock/Sherlock/Sherlock-venv
+git clone https://github.com/sherlock-project/sherlock.git  ~/_installed/Sherlock
+cd  ~/_installed/Sherlock
+python3 -m venv ~/_installed/Sherlock/Sherlock-venv
 source Sherlock-venv/bin/activate
 pip3 install -r requirements.txt
 deactivate
@@ -365,8 +365,8 @@ echo -e "$VERDE Sherlock Installed $RC"
 
 
 echo -e "$AZUL3 Installing Photon... $RC"
-git clone https://github.com/s0md3v/Photon.git  /opt/sherlock/Photon/
-cd  /opt/sherlock/Photon/
+git clone https://github.com/s0md3v/Photon.git  ~/_installed/Photon/
+cd  ~/_installed/Photon/
 python3 -m venv Photon-venv
 source Photon-venv/bin/activate
 pip3 install -r requirements.txt
@@ -375,8 +375,8 @@ echo -e "$VERDE Photon Installed $RC"
  
 
 echo -e "$AZUL3 Installing CloudFail... $RC"
-git clone https://github.com/m0rtem/CloudFail.git  /opt/sherlock/CloudFail/
-cd  /opt/sherlock/CloudFail/
+git clone https://github.com/m0rtem/CloudFail.git  ~/_installed/CloudFail/
+cd  ~/_installed/CloudFail/
 python3 -m venv CloudFail-venv
 source CloudFail-venv/bin/activate
 pip3 install -r requirements.txt
@@ -385,8 +385,8 @@ echo -e "$VERDE CloudFail Installed $RC"
  
 
 echo -e "$AZUL3 Installing CloudScraper... $RC"
-git clone https://github.com/jordanpotti/CloudScraper.git  /opt/sherlock/CloudScraper/
-cd  /opt/sherlock/CloudScraper/
+git clone https://github.com/jordanpotti/CloudScraper.git  ~/_installed/CloudScraper/
+cd  ~/_installed/CloudScraper/
 python3 -m venv CloudScraper-venv
 source CloudScraper-venv/bin/activate
 pip3 install -r requirements.txt
@@ -395,8 +395,8 @@ echo -e "$VERDE CloudScraper Installed $RC"
 
 
 echo -e "$AZUL3 Installing DNSRecon... $RC"
-git clone https://github.com/darkoperator/dnsrecon.git  /opt/sherlock/DNSRecon/
-cd  /opt/sherlock/DNSRecon/
+git clone https://github.com/darkoperator/dnsrecon.git  ~/_installed/DNSRecon/
+cd  ~/_installed/DNSRecon/
 python3 -m venv DNSRecon-venv
 source DNSRecon-venv/bin/activate
 pip3 install -r requirements.txt
@@ -405,8 +405,8 @@ echo -e "$VERDE DNSRecon Installed $RC"
  
 
 echo -e "$AZUL3 Installing Hostintel... $RC"
-git clone https://github.com/keithjjones/hostintel.git  /opt/sherlock/Hostintel/
-cd  /opt/sherlock/Hostintel/
+git clone https://github.com/keithjjones/hostintel.git  ~/_installed/Hostintel/
+cd  ~/_installed/Hostintel/
 python3 -m venv Hostintel-venv
 source Hostintel-venv/bin/activate
 pip3 install -r requirements.txt
@@ -415,8 +415,8 @@ echo -e "$VERDE Hostintel Installed $RC"
 
 
 echo -e "$AZUL3 Installing Infoga... $RC"
-git clone https://github.com/The404Hacking/Infoga.git  /opt/sherlock/infoga/
-cd  /opt/sherlock/infoga/
+git clone https://github.com/The404Hacking/Infoga.git  ~/_installed/infoga/
+cd  ~/_installed/infoga/
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev
 curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
 echo "export PYENV_ROOT=\"$HOME/.pyenv\"" >> -a .bashrc 
@@ -437,8 +437,8 @@ echo -e "$VERDE Infoga Installed $RC"
  
 
 echo -e "$AZUL3 Installing GitRecon... $RC"
-git clone https://github.com/GONZOsint/gitrecon.git  /opt/sherlock/gitrecon/
-cd  /opt/sherlock/gitrecon/
+git clone https://github.com/GONZOsint/gitrecon.git  ~/_installed/gitrecon/
+cd  ~/_installed/gitrecon/
 python3 -m venv gitrecon-venv
 source gitrecon-venv/bin/activate
 python3 -m pip install -r requirements.txt
@@ -447,8 +447,8 @@ echo -e "$VERDE GitRecon Installed $RC"
 
 
 echo -e "$AZUL3 Installing ExifTool.. $RC"
-mkdir -p  /opt/sherlock/ExifTool/
-cd  /opt/sherlock/ExifTool/
+mkdir -p  ~/_installed/ExifTool/
+cd  ~/_installed/ExifTool/
 wget  https://exiftool.org/Image-ExifTool-12.63.tar.gz
 tar xfz Image-ExifTool-12.63.tar.gz
 rm Image-ExifTool-12.63.tar.gz
@@ -456,11 +456,11 @@ echo -e "$VERDE Exiftool Installed $RC"
 
 
 echo -e "$AZUL3 Installing EyeWitness... $RC"
-git clone https://github.com/RedSiege/EyeWitness.git  /opt/sherlock/eyewitness/
-cd /opt/sherlock/eyewitness
-python3 -m venv /opt/sherlock/eyewitness/eyewitness-venv
+git clone https://github.com/RedSiege/EyeWitness.git  ~/_installed/eyewitness/
+cd ~/_installed/eyewitness
+python3 -m venv ~/_installed/eyewitness/eyewitness-venv
 source eyewitness-venv/bin/activate
-cd  /opt/sherlock/eyewitness/Python/setup
+cd  ~/_installed/eyewitness/Python/setup
 sudo bash setup.sh
 pip3 install netaddr
 pip3 install selenium
@@ -472,18 +472,18 @@ echo -e "$RC"
 
 
 echo -e "$AZUL3 Installing Metagoofil... $RC"
-git clone https://github.com/opsdisk/metagoofil  /opt/sherlock/metagoofil/
-cd /opt/sherlock/metagoofil/
-python3 -m venv /opt/sherlock/metagoofil/metagoofil-venv
+git clone https://github.com/opsdisk/metagoofil  ~/_installed/metagoofil/
+cd ~/_installed/metagoofil/
+python3 -m venv ~/_installed/metagoofil/metagoofil-venv
 source metagoofil-venv/bin/activate
 pip3 install -r requirements.txt
 echo -e "$VERDE Metagoofil Installed $RC"
 
 
 echo -e "$AZUL3 Installing OSFramework... $RC"
-mkdir -p /opt/sherlock/osrframework/
-cd /opt/sherlock/osrframework/
-python3 -m venv /opt/sherlock/osrframework/osrframework-venv
+mkdir -p ~/_installed/osrframework/
+cd ~/_installed/osrframework/
+python3 -m venv ~/_installed/osrframework/osrframework-venv
 source osrframework-venv/bin/activate
 pip3 install pip==21.2
 pip3 install osrframework
@@ -493,9 +493,9 @@ echo -e "$VERDE OSRFramework Installed $RC"
 
 
 echo -e "$AZUL3 Installing eo-ripper... $RC"
-git clone https://github.com/Quantika14/email-osint-ripper.git /opt/sherlock/eo-ripper/
-cd /opt/sherlock/eo-ripper/
-python3 -m venv /opt/sherlock/eo-ripper/eo-ripper-venv
+git clone https://github.com/Quantika14/email-osint-ripper.git ~/_installed/eo-ripper/
+cd ~/_installed/eo-ripper/
+python3 -m venv ~/_installed/eo-ripper/eo-ripper-venv
 source eo-ripper-venv/bin/activate
 pip3 install -r requeriments.txt
 pip3 install requests
@@ -504,9 +504,9 @@ echo -e "$VERDE eo-ripper Installed $RC"
 
 
 echo -e "$AZUL3 Installing Instaloader... $RC"
-mkdir -p /opt/sherlock/instaloader/
-cd /opt/sherlock/instaloader/
-python3 -m venv /opt/sherlock/instaloader/instaloader-venv
+mkdir -p ~/_installed/instaloader/
+cd ~/_installed/instaloader/
+python3 -m venv ~/_installed/instaloader/instaloader-venv
 source instaloader-venv/bin/activate
 pip3 install instaloader
 deactivate
@@ -514,9 +514,9 @@ echo -e "$VERDE Instaloader Installed $RC"
 
 
 echo -e "$AZUL3 Installing GHunt... $RC"
-git clone https://github.com/mxrch/ghunt /opt/sherlock/GHunt
-cd  /opt/sherlock/GHunt
-python3 -m venv /opt/sherlock/GHunt/GHunt-venv
+git clone https://github.com/mxrch/ghunt ~/_installed/GHunt
+cd  ~/_installed/GHunt
+python3 -m venv ~/_installed/GHunt/GHunt-venv
 source GHunt-venv/bin/activate
 pip3 install pipx
 pipx ensurepath
@@ -527,9 +527,9 @@ echo -e "$RC"
 
 
 echo -e "$AZUL3 Installing Ivre... $RC"
-mkdir  /opt/sherlock/Ivre/
-cd /opt/sherlock/Ivre/
-python3 -m venv /opt/sherlock/Ivre/Ivre-venv
+mkdir  ~/_installed/Ivre/
+cd ~/_installed/Ivre/
+python3 -m venv ~/_installed/Ivre/Ivre-venv
 source Ivre-venv/bin/activate
 pip install ivre
 deactivate
@@ -538,9 +538,9 @@ echo -e "$RC"
 
 
 echo -e "$AZUL3 Installing TorBot... $RC"
-git clone https://github.com/DedSecInside/TorBot.git  /opt/sherlock/torbot/
-cd  /opt/sherlock/torbot
-python3 -m venv /opt/sherlock/torbot/torbot-venv
+git clone https://github.com/DedSecInside/TorBot.git  ~/_installed/torbot/
+cd  ~/_installed/torbot
+python3 -m venv ~/_installed/torbot/torbot-venv
 source torbot-venv/bin/activate
 pip3 install -r requirements.txt
 python3 torbot -u https://www.example.com
@@ -550,9 +550,9 @@ echo -e "$RC"
 
 
 echo -e "$AZUL3 Installing ProtOSINT... $RC"
-git clone https://github.com/pixelbubble/ProtOSINT.git /opt/sherlock/protosint/
-cd  /opt/sherlock/protosint/
-python3 -m venv /opt/sherlock/protosint/protosint-venv
+git clone https://github.com/pixelbubble/ProtOSINT.git ~/_installed/protosint/
+cd  ~/_installed/protosint/
+python3 -m venv ~/_installed/protosint/protosint-venv
 source protosint-venv/bin/activate
 pip3 install -r requirements.txt
 pip3 install requests
