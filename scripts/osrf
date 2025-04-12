@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd /home/sherlock/Programs/osrframework/
-source /home/sherlock/Programs/osrframework/osrframework-venv/bin/activate
+cd ~/_installed/osrframework/
+source ~/_installed/osrframework/osrframework-venv/bin/activate
 osrf "$@"
