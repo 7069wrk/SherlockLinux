@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd /home/sherlock/Programs/scanless/scanless
-source /home/sherlock/Programs/scanless/scanless-venv/bin/activate
+cd ~/_installed/scanless/scanless
+source ~/_installed/scanless/scanless-venv/bin/activate
 scanless "$@"
