@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd ~/_installed/gitrecon
-source ~/_installed/gitrecon/gitrecon-venv/bin/activate
-~/_installed/gitrecon/gitrecon-venv/bin/python /home/sherlock/Programs/gitrecon/gitrecon.py "$@" 
+cd $MY_SHERLOCK/gitrecon
+source $MY_SHERLOCK/gitrecon/gitrecon-venv/bin/activate
+$MY_SHERLOCK/gitrecon/gitrecon-venv/bin/python $MY_SHERLOCK/gitrecon/gitrecon.py "$@" 
