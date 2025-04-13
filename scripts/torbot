@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd ~/_installed/torbot
-source ~/_installed/torbot/torbot-venv/bin/activate
-~/_installed/torbot/torbot-venv/bin/python3 torbot "$@"
+cd $MY_SHERLOCK/torbot
+source $MY_SHERLOCK/torbot/torbot-venv/bin/activate
+$MY_SHERLOCK/torbot/torbot-venv/bin/python3 torbot "$@"
