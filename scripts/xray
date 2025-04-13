@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-~/_installed/XRay/build/xray "$@"
+$MY_SHERLOCK/XRay/build/xray "$@"
