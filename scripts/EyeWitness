@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd ~/_installed/eyewitness
-source ~/_installed/eyewitness/eyewitness-venv/bin/activate
-~/_installed/eyewitness/Python/EyeWitness.py "$@"
+cd $MY_SHERLOCK/eyewitness
+source $MY_SHERLOCK/eyewitness/eyewitness-venv/bin/activate
+$MY_SHERLOCK/eyewitness/Python/EyeWitness.py "$@"
