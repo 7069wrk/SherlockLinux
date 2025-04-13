@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd ~/_installed/spiderfoot/spiderfoot-4.0/
-source ~/_installed/spiderfoot/spiderfoot-venv/bin/activate
-~/_installed/spiderfoot/spiderfoot-venv/bin/python3 ./sf.py -l 127.0.0.1:5001
+cd $MY_SHERLOCK/spiderfoot/spiderfoot-4.0/
+source $MY_SHERLOCK/spiderfoot/spiderfoot-venv/bin/activate
+$MY_SHERLOCK/spiderfoot/spiderfoot-venv/bin/python3 ./sf.py -l 127.0.0.1:5001
