@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-~/_installed/yacy/yacy/startYACY.sh
+$MY_SHERLOCK/yacy/yacy/startYACY.sh
