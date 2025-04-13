@@ -9,9 +9,15 @@ NARANJA='\033[93m' ### YELLOW
 RC='\e[0m' ### RESET COLOR TO DEFAULT
 COLOROFF='\033[0m' ### NO COLOR
 
-
+# get the current directory and store as the bash source path.
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+#store where installs will take place rather than needing to edit entire script 
 INSTDIR=~/_installed
+
+#store the pathas an environment variable to be used for all the .desktop scripts
+# can be called with cd "${MY_SHERLOCK}"
+export MY_SHERLOCK=$INSTDIR
 
 
 echo -e "$RC"
