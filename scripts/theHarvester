@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-
-cd ~/_installed/theHarvester
-source ~/_installed/theHarvester/theHarvester-venv/bin/activate
-~/_installed/theHarvester/theHarvester-venv/bin/python3 theHarvester.py "$@"
+cd $MY_SHERLOCK/theHarvester
+source $MY_SHERLOCK/theHarvester/theHarvester-venv/bin/activate
+$MY_SHERLOCK/theHarvester/theHarvester-venv/bin/python3 theHarvester.py "$@"
 
