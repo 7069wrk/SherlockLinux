@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd ~/_installed/instaloader/
-source ~/_installed/instaloader/instaloader-venv/bin/activate
+cd $MY_SHERLOCK/instaloader/
+source $MY_SHERLOCK/instaloader/instaloader-venv/bin/activate
 instaloader "$@"
