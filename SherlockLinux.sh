@@ -112,11 +112,11 @@ echo -e "$RC"
 echo -e "$VERDE Configure Styles $RC"
 echo -e "$RC"
 
-sudo mv /usr/share/images/desktop-base/desktop-grub.png /usr/share/images/desktop-base/desktop-grubBACKUP.png
-sudo cp $SCRIPT_DIR/imagenes/desktop-grub.png /usr/share/images/desktop-base/desktop-grub.png
-sudo mv /etc/default/grub /etc/default/grubBACKUP
-sudo cp $SCRIPT_DIR/other/grub /etc/default/grub
-sudo update-grub
+#sudo mv /usr/share/images/desktop-base/desktop-grub.png /usr/share/images/desktop-base/desktop-grubBACKUP.png
+#sudo cp $SCRIPT_DIR/imagenes/desktop-grub.png /usr/share/images/desktop-base/desktop-grub.png
+#sudo mv /etc/default/grub /etc/default/grubBACKUP
+#sudo cp $SCRIPT_DIR/other/grub /etc/default/grub
+#sudo update-grub
 
 
 sudo cp $SCRIPT_DIR/imagenes/desktop-background.png /usr/share/images/desktop-base/default
