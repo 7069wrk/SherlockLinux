@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd ~/_installed/MrHolmes
-source ~/_installed/MrHolmes/MrHolmes-venv/bin/activate
-~/_installed/MrHolmes/MrHolmes-venv/bin/python3 /home/sherlock/Programs/MrHolmes/MrHolmes.py "$@"
+cd $MY_SHERLOCK/MrHolmes
+source $MY_SHERLOCK/MrHolmes/MrHolmes-venv/bin/activate
+$MY_SHERLOCK/MrHolmes/MrHolmes-venv/bin/python3 $MY_SHERLOCK/MrHolmes/MrHolmes.py "$@"
