@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd ~/_installed/Hostintel
-source ~/_installed/Hostintel/Hostintel-venv/bin/activate
-~/_installed/Hostintel/Hostintel-venv/bin/python3 /home/sherlock/Programs/Hostintel/hostintel.py "$@"
+cd $MY_SHERLOCK/Hostintel
+source $MY_SHERLOCK/Hostintel/Hostintel-venv/bin/activate
+$MY_SHERLOCK/Hostintel/Hostintel-venv/bin/python3 $MY_SHERLOCK/Hostintel/hostintel.py "$@"
