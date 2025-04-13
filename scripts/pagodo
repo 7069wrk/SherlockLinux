@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd ~/_installed/pagodo
-source ~/_installed/pagodo/pagodo-venv/bin/activate
-~/_installed/pagodo/pagodo-venv/bin/python3 /home/sherlock/Programs/pagodo/pagodo.py "$@"
+cd $MY_SHERLOCK/pagodo
+source $MY_SHERLOCK/pagodo/pagodo-venv/bin/activate
+$MY_SHERLOCK/pagodo/pagodo-venv/bin/python3 $MY_SHERLOCK/pagodo/pagodo.py "$@"
