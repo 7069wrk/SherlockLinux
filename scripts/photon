@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd ~/_installed/Photon
-source ~/_installed/Photon/Photon-venv/bin/activate
-~/_installed/Photon/Photon-venv/bin/python3 /home/sherlock/Programs/Photon/photon.py "$@"
+cd $MY_SHERLOCK/Photon
+source $MY_SHERLOCK/Photon/Photon-venv/bin/activate
+$MY_SHERLOCK/Photon/Photon-venv/bin/python3 $MY_SHERLOCK/Photon/photon.py "$@"
