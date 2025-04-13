@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd ~/_installed/DNSRecon
-source ~/_installed/DNSRecon/DNSRecon-venv/bin/activate
-sudo ~/_installed/DNSRecon/DNSRecon-venv/bin/python3 ~/_installed/DNSRecon/dnsrecon.py "$@"
+cd $MY_SHERLOCK/DNSRecon
+source $MY_SHERLOCK/DNSRecon/DNSRecon-venv/bin/activate
+sudo $MY_SHERLOCK/DNSRecon/DNSRecon-venv/bin/python3 $MY_SHERLOCK/DNSRecon/dnsrecon.py "$@"
