@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-~/_installed/certgraph/certgraph "$@"
+$MY_SHERLOCK/certgraph/certgraph "$@"
