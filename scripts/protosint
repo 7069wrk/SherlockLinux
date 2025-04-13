@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd ~/_installed/protosint
-source ~/_installed/protosint/protosint-venv/bin/activate
-~/_installed/protosint/protosint-venv/bin/python3 /home/sherlock/Programs/protosint/protosint.py
+cd $MY_SHERLOCK/protosint
+source $MY_SHERLOCK/protosint/protosint-venv/bin/activate
+$MY_SHERLOCK/protosint/protosint-venv/bin/python3 $MY_SHERLOCK/protosint/protosint.py
