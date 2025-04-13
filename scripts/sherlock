@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-cd ~/_installed/Sherlock
-source ~/_installed/Sherlock/Sherlock-venv/bin/activate
-~/_installed/Sherlock/Sherlock-venv/bin/python3 /home/sherlock/Programs/Sherlock/sherlock/sherlock.py "$@"
+cd $MY_SHERLOCK/Sherlock
+source $MY_SHERLOCK/Sherlock/Sherlock-venv/bin/activate
+$MY_SHERLOCK/Sherlock/Sherlock-venv/bin/python3 $MY_SHERLOCK/Sherlock/sherlock/sherlock.py "$@"
+#need to look at what this does post install.  
