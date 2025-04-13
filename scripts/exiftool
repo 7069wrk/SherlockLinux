@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
 $MY_SHERLOCK/ExifTool/Image-ExifTool-12.63/exiftool "$@"
+#need to make this more universal so that it knows to just run the version installed not the dotted versions
