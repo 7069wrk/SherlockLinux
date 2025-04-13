@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-~/_installed/yacy/yacy/stopYACY.sh
+$MY_SHERLOCK/yacy/yacy/stopYACY.sh
