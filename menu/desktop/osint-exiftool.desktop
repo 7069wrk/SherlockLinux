@@ -3,5 +3,5 @@ Type=Application
 Name=ExifTool
 Categories=X-Varios;
 Exec=/usr/share/sherlock-menu/exec-in-shell "exiftool -h"
-Icon=/home/sherlock/iconos/osint-sherlocklinux.png
+Icon=~/_installed/sherlock/iconos/osint-sherlocklinux.png
 Terminal=true
