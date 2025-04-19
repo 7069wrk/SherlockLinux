@@ -13,7 +13,7 @@ COLOROFF='\033[0m' ### NO COLOR
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 #store where installs will take place rather than needing to edit entire script 
-INSTDIR=~/_installed
+INSTDIR=~/_installed/sherlock
 
 #store the pathas an environment variable to be used for all the .desktop scripts
 # can be called with cd "${MY_SHERLOCK}"
