@@ -102,6 +102,7 @@ echo -e "$RC"
 #sudo apt install -y virtualbox-guest-dkms virtualbox-guest-x11
 #sudo adduser osint vboxsf
 
+### Install Open VM Tools
 sudo apt install -y open-vm-tools
 sudo apt install -y open-vm-tools-desktop
 
@@ -119,36 +120,39 @@ echo -e "$RC"
 #sudo update-grub
 
 
-sudo cp $SCRIPT_DIR/imagenes/desktop-background.png /usr/share/images/desktop-base/default
-sudo cp $SCRIPT_DIR/imagenes/login-background.svg /usr/share/images/desktop-base/login-background.svg
+#sudo cp $SCRIPT_DIR/imagenes/desktop-background.png /usr/share/images/desktop-base/default
+#sudo cp $SCRIPT_DIR/imagenes/login-background.svg /usr/share/images/desktop-base/login-background.svg
 
 
-sudo mv /usr/share/images/desktop-base/desktop-lockscreen.xml /usr/share/images/desktop-base/desktop-lockscreenBACKUP.xml
-sudo cp $SCRIPT_DIR/imagenes/desktop-lockscreen.xml /usr/share/images/desktop-base/desktop-lockscreen.xml
-sudo ln -s /usr/share/images/desktop-base/login-background.svg /usr/share/desktop-base/emerald-theme/login/background.svg	
+#sudo mv /usr/share/images/desktop-base/desktop-lockscreen.xml /usr/share/images/desktop-base/desktop-lockscreenBACKUP.xml
+#sudo cp $SCRIPT_DIR/imagenes/desktop-lockscreen.xml /usr/share/images/desktop-base/desktop-lockscreen.xml
+#sudo ln -s /usr/share/images/desktop-base/login-background.svg /usr/share/desktop-base/emerald-theme/login/background.svg	
 
-sudo apt install -y lightdm-gtk-greeter-settings
-sudo mv /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.confBACKUP
-sudo cp $SCRIPT_DIR/other/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
-sudo cp $SCRIPT_DIR/imagenes/sherlock.png /usr/share/images/desktop-base/sherlock.png
-default-user-image = /usr/share/images/desktop-base/sherlock.png
+#sudo apt install -y lightdm-gtk-greeter-settings
+#sudo mv /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.confBACKUP
+#sudo cp $SCRIPT_DIR/other/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
+#sudo cp $SCRIPT_DIR/imagenes/sherlock.png /usr/share/images/desktop-base/sherlock.png
+#default-user-image = /usr/share/images/desktop-base/sherlock.png
 
-xset b off
+#xset b off
 
-echo -e "$VERDE Styles applied! $RC"
-echo -e "$RC"
+#echo -e "$VERDE Styles applied! $RC"
+#echo -e "$RC"
 
 
 ###
 ### Install tools identified as the Sherlock collection 
 ###
 
+### Install Firefox-esr 
+sudo add-apt-repository ppa:mozillateam/ppa 
+sudo apt-get update
 echo -e "$AZUL3 Installing Firefox..."
 sudo apt install -y firefox-esr
 firefox-esr
 echo -e "$VERDE Firefox Installed $RC"
 
-
+### Install Google Chrome
 echo -e "$AZUL3 Installing Google Chome..."
 echo -e "$COLOROFF"
 lsb_release -a
