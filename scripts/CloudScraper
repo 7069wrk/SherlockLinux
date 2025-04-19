@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd $MY_SHERLOCKk/CloudScraper
+cd $MY_SHERLOCK/CloudScraper
 source $MY_SHERLOCK/CloudScraper/CloudScraper-venv/bin/activate
 $MY_SHERLOCK/CloudScraper/CloudScraper-venv/bin/python3 $MY_SHERLOCK/CloudScraper/CloudScraper.py "$@"
