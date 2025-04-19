@@ -3,5 +3,5 @@ Type=Application
 Name=X Ray
 Categories=X-DNS;
 Exec=/usr/share/sherlock-menu/exec-in-shell "xray"
-Icon=/home/sherlock/iconos/osint-sherlocklinux.png
+Icon=~/_installed/sherlock/iconos/osint-sherlocklinux.png
 Terminal=true
