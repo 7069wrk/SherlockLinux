@@ -39,7 +39,7 @@ sudo apt install git
 #clone from original Spanish repository
 git clone https://github.com/SherlockLinux/SherlockLinux.git ~/SherlockLinux
 #clone from this repository
-git clone https://github.com/7069wrk/SherlockLinux.git ~/SherlockLinux
+git clone https://github.com/7069wrk/SherlockLinux.git ~/_installed/sherlock
 ~~~
 
 3º Giving execution permissions to the Sherlock Linux script
