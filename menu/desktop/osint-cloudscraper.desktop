@@ -3,5 +3,5 @@ Type=Application
 Name=Cloud Scraper
 Categories=X-DNS;
 Exec=/usr/share/sherlock-menu/exec-in-shell "CloudScraper -h"
-Icon=/home/sherlock/iconos/osint-cloudscraper.png
+Icon=~/_installed/sherlock/iconos/osint-cloudscraper.png
 Terminal=true
