@@ -3,5 +3,5 @@ Type=Application
 Name=Yacy
 Categories=X-Browsers;
 Exec=/usr/share/sherlock-menu/exec-in-shell "startYACY"
-Icon=/home/sherlock/iconos/osint-yacy.png
+Icon=~/_installed/sherlock/iconos/osint-yacy.png
 Terminal=true
