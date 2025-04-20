@@ -22,7 +22,6 @@ export_line="export MY_SHERLOCK=\"$INSTDIR\""
 echo "$export_line" >> ~/.bashrc
 source ~/.bashrc
 
-
 ### create installation path for applications
 mkdir  $INSTDIR
 
@@ -61,6 +60,9 @@ echo -e "$NARANJA [Press enter to begin] ====>>>>>>>>"
 read -p ""
 echo -e "$RC"
 
+
+
+
 ### Update cache and apps
 sudo apt -y update && sudo apt -y upgrade
 
@@ -91,8 +93,8 @@ sudo apt install -y network-manager
 sudo apt install -y network-manager-gnome
 sudo systemctl enable NetworkManager.service
 
-### create installation path for applications
-mkdir  $INSTDIR
+### cp files to install path
+cp -rf . $INSTDIR
 
 ### install GO
 cd $INSTDIR
