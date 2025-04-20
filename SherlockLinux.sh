@@ -13,12 +13,18 @@ COLOROFF='\033[0m' ### NO COLOR
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 #store where installs will take place rather than needing to edit entire script 
-home=$HOME
-INSTDIR=$home/_installed/sherlock
+home_dir=$HOME
+INSTDIR=$home_dir/_installed/sherlock
 
 #store the pathas an environment variable to be used for all the .desktop scripts
 # can be called with cd "${MY_SHERLOCK}"
-export MY_SHERLOCK=$INSTDIR
+export_line="export MY_SHERLOCK=\"$INSTDIR\""
+echo "$export_line" >> ~/.bashrc
+source ~/.bashrc
+
+
+### create installation path for applications
+mkdir  $INSTDIR
 
 
 echo -e "$RC"
