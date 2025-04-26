@@ -155,6 +155,7 @@ echo -e "$RC"
 
 ### Install Firefox-esr 
 ### https://www.ubuntuupdates.org/ppa/mozilla_esr
+### sudo apt install software-properties-common -y
 sudo add-apt-repository ppa:mozillateam/ppa 
 sudo apt-get update
 echo -e "$AZUL3 Installing Firefox..."
